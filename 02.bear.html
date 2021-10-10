@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .face1 {
+      width: 500px;
+      height: 500px;
+      border-radius: 250px;
+      background: #000;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .face1::before {
+      content: "";
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: white;
+      position: absolute;
+      left: 22%;
+      top: 20%;
+    }
+
+    .face1::after {
+      content: "";
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: white;
+      position: absolute;
+      right: 22%;
+      top: 20%;
+    }
+
+    .face2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 250px;
+
+    }
+
+    .face2::before {
+      content: "";
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background-color: black;
+      position: absolute;
+      left: 25%;
+      top: 23%;
+      transform: translateX(-2%);
+    }
+
+    .face2::after {
+      content: "";
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background-color: black;
+      position: absolute;
+      right: 25%;
+      top: 23%;
+      z-index: 1;
+    }
+
+    .blush {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 250px;
+    }
+
+    .blush:before {
+      content: "";
+      width: 130px;
+      height: 130px;
+      border-radius: 75px;
+      background-color: red;
+      position: absolute;
+      top: 50%;
+      left: -5%;
+      transform: translateY(-50%);
+    }
+
+    .blush:after {
+      content: "";
+      width: 130px;
+      height: 130px;
+      border-radius: 75px;
+      background-color: red;
+      position: absolute;
+      top: 50%;
+      right: -5%;
+      transform: translateY(-50%);
+    }
+
+    .nose {
+      width: 200px;
+      height: 150px;
+      border-radius: 125px / 100px;
+      background-color: white;
+      position: absolute;
+      top: 200px;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+
+    .nose::before {
+      content: "";
+      width: 50px;
+      height: 40px;
+      border-radius: 25px / 20px;
+      background-color: black;
+      position: absolute;
+      top: 10px;
+      left: 100px;
+      transform: translateX(-50%);
+    }
+
+    .nose::after {
+      content: "";
+      width: 140px;
+      height: 50px;
+      border-radius: 70px / 25px;
+      background-color: black;
+      position: absolute;
+      top: 70px;
+      left: 30px;
+    }
+
+    .ear1 {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border-radius: 250px;
+    }
+
+    .ear1::before {
+      content: "";
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-color: black;
+      position: absolute;
+      top: 6px;
+      left: 60px;
+    }
+
+    .ear1::after {
+      content: "";
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-color: black;
+      position: absolute;
+      top: 6px;
+      right: 60px;
+    }
+
+    .ear2 {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border-radius: 250px;
+    }
+
+    .ear2::before {
+      content: "";
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: white;
+      position: absolute;
+      top: 20px;
+      left: 75px;
+    }
+
+    .ear2::after {
+      content: "";
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: white;
+      position: absolute;
+      top: 20px;
+      right: 75px;
+    }
+
+    .v {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border-radius: 275px;
+    }
+
+    .v::before {
+      content: "";
+      width: 60px;
+      height: 70px;
+      background-color: white;
+      position: absolute;
+      left: 255px;
+      bottom: 40px;
+      transform: skewX(315deg);
+    }
+
+    .v::after {
+      content: "";
+      width: 60px;
+      height: 70px;
+      background-color: white;
+      position: absolute;
+      right: 255px;
+      bottom: 40px;
+      transform: skewX(45deg);
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="face1">
+    <div class="face2"></div>
+    <div class="blush"></div>
+    <div class="nose"></div>
+    <div class="ear1"></div>
+    <div class="ear2"></div>
+    <div class="v"></div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box1 {
+      width: 600px;
+      height: 100px;
+      border: 1px solid #333;
+      border-radius: 0.5em;
+      background-image: linear-gradient(180deg, white, lightgrey, white);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+
+    .box1::before {
+      content: "";
+      width: 50px;
+      height: 140px;
+      border: 1px solid #333;
+      background-image: linear-gradient(180deg, white, lightgrey, white);
+      border-radius: 10%;
+      position: absolute;
+      top: -20px;
+      left: -50px;
+    }
+
+    .box1::after {
+      content: "";
+      width: 120px;
+      height: 0px;
+      border: 1px solid #000;
+      position: absolute;
+      right: -122px;
+      top: 51px;
+    }
+
+    .box2 {
+      width: 500px;
+      height: 150px;
+      border: 1px solid #333;
+      background-color: black;
+      position: absolute;
+      left: 50px;
+      top: -25px;
+    }
+
+    .box2::before {
+      content: "";
+      width: 225px;
+      height: 150px;
+      border: 0px solid #333;
+      background-image: linear-gradient(180deg, white, lightgrey, white);
+      position: absolute;
+    }
+
+    .box2::after {
+      content: "";
+      width: 225px;
+      height: 150px;
+      background-image: linear-gradient(180deg, #ffa, lightgrey, #ffa);
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    p{
+      position: absolute;
+      left: 0;
+      top: 112px;
+      color: #333;
+    }
+
+    .scale {
+      width: 500px;
+      height: 25px;
+      position: absolute;
+      z-index: 1;
+      background-image: repeating-linear-gradient(90deg,
+          transparent 0,
+          transparent 9px,
+          black 9px,
+          black 10px);
+      background-size: 100% 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box1">
+    <div class="box2">
+      <p>Made in Taiwan</p>
+      <div class="scale"></div>
+    </div>
+  </div>
+</body>
+
+</html>
